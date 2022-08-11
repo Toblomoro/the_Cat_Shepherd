@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-
-  constructor() { }
+  hero: Hero = {
+    id: 1,
+    name: 'Windstorm'
+  };
+  constructor() { 
+   
+  }
+  
 
   ngOnInit(): void {
+    
   }
+  
 
+}
+export interface Hero {
+  id: number;
+  name: string;
 }
