@@ -1,5 +1,15 @@
 heroes.component.html (HeroesComponent template)
-content_copy
+content_copy 
 <h2>{{hero.name | uppercase}} Details</h2>
-<div><span>id: </span>{{hero.id}}</div>
-<div><span>name: </span>{{hero.name}}</div>
+<ul>  
+ <li *ngFor = 'let hero of heroes'>
+    <button type="button">
+        <span class="name"> {{hero.name}}</span>
+
+    </button>
+ </li>
+</ul>
+<div>
+    <label for ="name"> Hero name: </label>
+    <input id="name" [(ngModel)]="hero.name" placeholder="name">
+</div>
